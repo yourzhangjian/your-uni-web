@@ -11,8 +11,8 @@
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8",
 		"app-plus": {
-			"background": "#efeff4",
-			"titleNView": false // 全局取消顶部导航, 自定义导航
-		}
+			"background": "#efeff4"
+		},
+		"navigationStyle": "custom" // 全局取消顶部导航, 自定义导航
 	}
 }

@@ -8,7 +8,7 @@
 				:key="index"
 			>
 				<view class="content-box">
-					<text class="content-text">{{ item.name+index }}</text>
+					<text class="content-text" @click="toEdit()">{{ item.name+index }}</text>
 				</view>
 			</uni-swipe-action-item>
 		</uni-swipe-action>
@@ -56,6 +56,13 @@ export default {
 				name: '单据名称',
 				remark: '这是一个备注'
 			})
+		}
+	},
+	methods: {
+		toEdit() {
+			uni.navigateTo({
+				url: '/pages/bill/BillEdit'
+			});
 		}
 	}
 }

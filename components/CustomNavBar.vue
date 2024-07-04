@@ -39,7 +39,11 @@ export default {
 	},
 	methods: {
 		clickLeft() {
-			alert(1)
+			if(this.leftText) {
+				uni.navigateBack({
+					delta: 1
+				})
+			}
 		},
 		clickRight() {
 			alert(2)

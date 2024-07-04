@@ -1,7 +1,9 @@
 <template>
 	<view class="custom_navbar">
-		<view style="height:36px;"></view>
-		<uni-nav-bar :left-text="leftText" :right-text="rightText" :title="title" :color="color" :background-color="backgroundColor" @clickLeft="clickLeft" @clickRight="clickRight" />
+		<view class="nav">
+			<view style="height: 36px;"></view>
+			<uni-nav-bar :left-text="leftText" :right-text="rightText" :title="title" :color="color" :background-color="backgroundColor" @clickLeft="clickLeft" @clickRight="clickRight" />
+		</view>
 	</view>
 </template>
 
@@ -48,6 +50,13 @@ export default {
 
 <style scoped>
 .custom_navbar {
-	
+	height: 80px;
+	width: 100%;
+}
+.nav {
+	background-color: #f7f7f7;
+	position: fixed;
+	z-index: 9999;
+	width: 100%;
 }
 </style>

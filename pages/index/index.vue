@@ -15,6 +15,18 @@
 		<uni-section title="个人信息" type="line">
 			个人信息
 		</uni-section>
+		<uni-section title="个人信息" type="line">
+			个人信息
+		</uni-section>
+		<uni-section title="个人信息" type="line">
+			个人信息
+		</uni-section>
+		<uni-section title="个人信息" type="line">
+			个人信息
+		</uni-section>
+		<uni-section v-for="item in 30" title="个人信息" type="line">
+			个人信息 {{item}}
+		</uni-section>
 		<!-- 升级中心 -->
 		<UpgradeCenter />
 	</view>

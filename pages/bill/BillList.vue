@@ -39,6 +39,11 @@ export default {
 			],
 		}
 	},
+	onLoad() {
+		 const systemInfo = uni.getSystemInfoSync()
+		 console.log(systemInfo);
+		 console.log(systemInfo.appVersion);
+	},
 	onPullDownRefresh() {
 		console.log('onPullDownRefresh...');
 	},

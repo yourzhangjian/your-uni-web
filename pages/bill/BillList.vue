@@ -2,15 +2,14 @@
 	<view>
 		<CustomNavBar left-text="返回" rightText="设置" title="单据列表" />
 		<uni-swipe-action class="swipe_action" ref="swipeAction">
-			<uni-swipe-action-item
-				v-for="(item, index) in dataList"
-				:right-options="options"
-				:key="index"
-			>
-				<view class="content-box">
-					<text class="content-text" @click="toEdit()">{{ item.name+index }}</text>
-				</view>
-			</uni-swipe-action-item>
+			<view v-for="(item, index) in dataList" :key="index">
+				<uni-section title="个人信息" type="line" @click="toEdit()"></uni-section>
+				<uni-swipe-action-item :right-options="options">
+					<view class="content-box">
+						<text class="content-text">{{ item.name+index }}</text>
+					</view>
+				</uni-swipe-action-item>
+			</view>
 		</uni-swipe-action>
 	</view>
 </template>
@@ -46,6 +45,11 @@ export default {
 	},
 	onPullDownRefresh() {
 		console.log('onPullDownRefresh...');
+		uni.showToast({
+			title: '下拉刷新中...',
+			icon: 'none',
+			duration: 2000
+		});
 	},
 	created() {
 		for (let i = 0; i < 30; i++) {

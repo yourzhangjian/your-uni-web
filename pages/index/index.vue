@@ -33,7 +33,7 @@
 			个人信息 {{item}}
 		</uni-section>
 		<!-- 升级中心 -->
-		<UpgradeCenter />
+		<UpgradeCenter update="isUpdate" />
 	</view>
 </template>
 
@@ -53,12 +53,22 @@ export default {
 			],
 			current: 0,
 			statusBarHeight: 0,
-			appVersion: null
+			appVersion: null,
+			isUpdate: false
 		}
 	},
 	onLoad() {
 		const systemInfo = uni.getSystemInfoSync();
 		this.appVersion = systemInfo.appVersion
+	},
+	onPullDownRefresh() {
+		console.log('onPullDownRefresh...');
+		uni.showToast({
+			title: '下拉刷新中...',
+			icon: 'none',
+			duration: 2000
+		});
+		this.isUpdate = true
 	},
 	methods: {
 		change(e) {

@@ -60,7 +60,7 @@ export default {
 .nav {
 	background-color: #f7f7f7;
 	position: fixed;
-	z-index: 9999;
+	z-index: 99;
 	width: 100%;
 }
 </style>

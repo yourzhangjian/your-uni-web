@@ -117,9 +117,15 @@
 	}
 
 	export default {
+		props: {
+			update: {
+				type: Boolean,
+				default: false
+			}
+		},
 		data() {
 			return {
-				shown: false,
+				shown: this.update,
 				// 从之前下载安装
 				installForBeforeFilePath: '',
 
